@@ -9,6 +9,13 @@
         <li class="nav-item">
           <%= link_to "about", about_path, class: "nav-link" %>
         </li>
+        <% if session[:user_id] != nil %>
+          <li class="nav-item">
+            <!-- In previous versions of RoR, we can change the method of the links requets through javascript -->
+            <!-- Now, with HOTWIRE, is better choice using button_to with method: :delete -->
+            <%= button_to "log out", logout_path, method: :delete, class: "nav-link btn btn-link" %>
+          </li>
+        <% end %>        
       </ul>
     </div>
   </div>

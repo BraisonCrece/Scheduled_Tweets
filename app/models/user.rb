@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_secure_password
 
   # here we are gonna put the validations of our User model
-  validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'Must be a valid email address' }
+  validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'Must be a valid email address' } # must exist, and must match with the RegExp
 
 
 
