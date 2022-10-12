@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   
   get 'about', to: 'about#index'
   
+
+  get 'password', to: 'passwords#edit'
+  pathc 'password', to: 'passwords#update'
+
   # sign_up routes
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'  
