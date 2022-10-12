@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
     if @user.save      
       # if is a valid user to be saved, then we store it in the database
       # Then we store the user id in the encrypted cookie that rails offers --> session hash
-      session[:user_id] = @user.id # Doing this, we are remembering who user is loged in
+      session[:user_id] = @user.id #--> Doing this, we are remembering who user is loged in
       # and next, we redirect the user to the index page
       redirect_to root_path, notice: 'User has been created successfully'
     else
