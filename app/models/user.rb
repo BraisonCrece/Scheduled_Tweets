@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :twitter_accounts # Here we tell Rails that each user can have one or more twitter accounts
                              # and, if the user has twitter accounts we can access them directly from the user model
                              # --> user.twitter_accounts
+  has_many :tweets
 
   # here we are gonna put the validations of our User model
   validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'Must be a valid email address' } # must exist, and must match with the RegExp
