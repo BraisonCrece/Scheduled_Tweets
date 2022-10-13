@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 ruby "3.1.2"
 
 gem 'bootstrap', '~> 5.2.1'
