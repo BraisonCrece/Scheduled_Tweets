@@ -1,4 +1,7 @@
-<div class="d-flex align-items-center justify-content-center">
-<h1>Main#index</h1>
+<div class="d-flex flex-column align-items-center justify-content-center pb-4">
+  <h1 class="mt4">Welcome!</h1>
+  <div>
+    <%= button_to 'Log in Tweeter', '/auth/twitter', method: :post, data: { turbo: false }, class: "btn btn-primary mt-4"  %>
+  </div>
+</div>
 
-<%= button_to 'Log in Tweeter', '/auth/twitter', method: :post, data: { turbo: false }  %>
