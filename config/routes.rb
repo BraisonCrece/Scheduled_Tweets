@@ -28,4 +28,7 @@ Rails.application.routes.draw do
 
   # log_out route
   delete 'logout', to: 'sessions#destroy'
+
+  # omniauth twitter routes
+  get 'auth/twitter/callback', to: 'omniauth_callbacks#twitter'
 end
