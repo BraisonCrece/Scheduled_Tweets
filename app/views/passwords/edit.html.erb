@@ -1,7 +1,8 @@
-<h1>Sign Up</h1>
+<h1>Edit Password</h1>
 
-<%= form_with model: @user, url: sign_up_path do |f|%>
-  
+<!-- this form takes the model 'Current.user' instead of 'User.new' because the user is currently logged in -->
+<%= form_with model: Current.user, url: edit_password_path do |f|%>
+  <!-- inside the form, we can refer to the object used by the form, to see if there is any error, like 'Validation failed'. -->
   <% if f.object.errors.any? %>
     <div class="alert alert-danger">
       <% f.object.errors.full_messages.each do |message| %>
@@ -11,11 +12,6 @@
   <% end %>  
 
   <div class="form-group mb-2">
-    <%= f.label :email, "Email" %>
-    <%= f.text_field :email, class: 'form-control', placeholder: 'steve@email.com' %>
-    <small id='emailHelp' class='form-text text-muted'>We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group mb-2">
     <%= f.label :password, 'Password' %>
     <%= f.password_field :password,class: 'form-control', placeholder: 'Password' %>
   </div>
@@ -24,7 +20,6 @@
     <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password confirmation' %>
   </div>
   <div>
-    <%= f.submit 'Get Started!', class: 'btn btn-primary mt-2', disable_with: 'Submiting...' %>
+    <%= f.submit 'Update Password', class: 'btn btn-primary mt-2', disable_with: 'Submiting...' %>
   </div>
 <% end %>
-

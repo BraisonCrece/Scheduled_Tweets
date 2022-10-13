@@ -1,0 +1,7 @@
+Hi <%= @user.email %>
+
+<h1>Someone requested a reset of your password.</h1>
+
+<p>If this was you, click the link below to reset your password. The link will expire automatically in 15 minutes</p>
+
+<%= password_reset_edit_url(token: @token) %>

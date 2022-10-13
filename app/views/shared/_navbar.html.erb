@@ -13,6 +13,9 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <% if Current.user %>
           <li class="nav-item">
+            <%= link_to Current.user.email, edit_password_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
             <!-- In previous versions of RoR (< 6), we can change the method of the links requets through javascript -->
             <!-- Now, with HOTWIRE, is better choice using button_to with method: :delete -->
             <%= button_to 'log out', logout_path, method: :delete, class: 'nav-link btn btn-link' %>

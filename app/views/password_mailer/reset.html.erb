@@ -1,0 +1,10 @@
+Hi <%= @user.email %>
+
+<h1>Someone requested a reset of your password.</h1>
+
+<p>If this was you, click the link below to reset your password. The link will expire automatically in 15 minutes</p>
+
+<!-- In this link we need to build the url with password_reset_edit_url, not with password_reset_edit_path
+     That's because this link will be outside our app, and will need to have information about protocol (https), domain, etc -->
+<%= link_to 'Reset password', password_reset_edit_url(token: @token) %> <!-- We are adding the token confirmation to the url -->
+

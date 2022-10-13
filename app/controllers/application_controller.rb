@@ -12,5 +12,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_user_logged_in!
+    # when a user tries to enter a page that requires registration, if the user is not registered, then redirect to sign_in_path
+    redirect_to sign_in_path, alert: 'You must be signed in todo that' if Current.user.nil?
+  end
+
       
 end
