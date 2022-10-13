@@ -9,6 +9,11 @@
       <%= image_tag twitter_account.image, class: 'rounded-circle' %>
       <%= link_to "@#{twitter_account.username}", "https://twitter.com/#{twitter_account.username}", target: :_blank %>
     </div>
+
+    <!-- Notice that we can send an instance of an object from our database inside a button_to or so, 
+         and Rails will convert this instance into a path with his :id -> "twitter_account/:id". 
+         In the button below we're sending the request with the delete method, so the user will be removed from the database -->
+    <%= button_to 'Disconnect', twitter_account, method: :delete, data: { turbo_confirm: 'Are you sure?'} %>
   </div>
 <% end %>
 
