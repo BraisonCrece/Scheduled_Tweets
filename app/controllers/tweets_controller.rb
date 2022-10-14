@@ -13,6 +13,7 @@ class TweetsController < ApplicationController
   def create
     @tweet = Current.user.tweets.create(tweet_params)
     if @tweet.save
+      # Here we are calling a background job called Tweet, which will publish the tweet on the date set in the 'publish_at' column
       redirect_to tweets_path, notice: 'Tweet was scheduled successfully'
     else
       render :new, status: :unprocessable_entity
@@ -21,7 +22,7 @@ class TweetsController < ApplicationController
 
   def edit; end
 
-  def update
+  def update    
     if @tweet.update(tweet_params)
       redirect_to tweets_path, notice: 'Tweet was updated successfully'
     else

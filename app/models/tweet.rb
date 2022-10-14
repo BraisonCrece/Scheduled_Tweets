@@ -9,6 +9,12 @@ class Tweet < ApplicationRecord
     self.publish_at ||= 48.hour.from_now
   end
 
+  after_save_commit do
+    if publish_at_previously_changed?
+      TweetJob.set(wait_until: publish_at).perform_later(self)
+    end
+  end
+
   def published?
     tweet_id? # Rails provides this kind of sintax to refer to a column name in our database. table: tweets -->   tweet_id 
   end

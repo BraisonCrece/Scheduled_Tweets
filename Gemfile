@@ -76,3 +76,5 @@ group :test do
 end
 
 gem "twitter", "~> 7.0"
+
+gem "sidekiq", "~> 6.5"
