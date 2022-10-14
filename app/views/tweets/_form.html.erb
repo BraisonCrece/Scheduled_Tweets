@@ -1,4 +1,4 @@
-<%= form_with model: tweet do |f| %>
+<%= form_with model: tweet, data: { turbo: false } do |f| %>
  <%= render '/shared/form_errors', f: f %>
   <div class="mb-3">
     <%= f.label :twitter_account_id %>
@@ -22,6 +22,6 @@
   <!-- with this condition, f.object <the object being handled by the form> .persisted? 
        we are displaying a 'Delete' button if there is any object in the form (the form is not empty) -->
   <% if f.object.persisted? %>
-    <%= button_to 'Delete', f.object, confirm: 'Are you sure?', data: { turbo: :false }, method: :delete, class: 'btn btn-outline-danger' %>
+    <%= button_to 'Delete', f.object, method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %>
   <% end %>  
 <% end %>
