@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_13_173658) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_14_133735) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_173658) do
     t.bigint "user_id", null: false
     t.bigint "twitter_account_id", null: false
     t.text "body"
-    t.datetime "published_at"
+    t.datetime "publish_at"
     t.string "tweet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
