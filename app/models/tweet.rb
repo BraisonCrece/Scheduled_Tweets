@@ -13,4 +13,9 @@ class Tweet < ApplicationRecord
     tweet_id? # Rails provides this kind of sintax to refer to a column name in our database. table: tweets -->   tweet_id 
   end
 
+  def publish_to_twitter!
+    tweet = twitter_account.client.update(body)
+    update(tweet_id: tweet.id)
+  end
+
 end
