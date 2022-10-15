@@ -80,4 +80,4 @@ gem "twitter", "~> 7.0"
 gem "sidekiq", "~> 6.5"
 
 gem 'execjs'
-gem 'therubyracer', :platforms => :ruby
+
