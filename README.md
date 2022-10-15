@@ -1,24 +1,33 @@
-# README
+# :technologist: PRACTICE PROJECT - SHEDULED TWEETS
+On this project I have learned :memo: :
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- ## OmniAuth: 
+  * config environments ✅
+  * setting API keys ✅
+  
+- ## Rails Credentials
+  * Using `rails credentials:edit` to store the Twitter API credentials to development & production ✅
+  
+- ## Backgroun Jobs
+  * Creating a TweetJob ✅
+  * `TweetJob.preform_later(@tweet)` ✅
+  
+- ## Sidekiq and Redis
+  * Installing and setting up Redis-server ✅
+  * Configuring `active_job_queue_adapter = :sidekiq` ✅
+  
+- ## Bootstrap ✅
 
-Things you may want to cover:
+- ## Session Cookies ✅
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- ## PasswordMailer < ApplicationMailer
+  * Config environment to be able to reset passwords by email ✅
+ 
+ - ## Deploy application :rocket:
+  * [Scheduled Tweets](https://tweets-programados.fly.dev/) ✅
+  
+  
+  ### It has been a great learning experience. Let's keep going!
+  
+  
+  
