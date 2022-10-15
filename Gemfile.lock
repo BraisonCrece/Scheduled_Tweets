@@ -305,6 +305,7 @@ DEPENDENCIES
   bootstrap (~> 5.2.1)
   capybara
   debug
+  execjs
   importmap-rails
   jbuilder
   omniauth-rails_csrf_protection
