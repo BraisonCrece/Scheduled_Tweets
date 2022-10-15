@@ -53,6 +53,14 @@ RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
     apt-get update -qq && \
     apt-get install --no-install-recommends -y ${BUILD_PACKAGES} \
+    apt install nodejs \
+    apt install lsb-release \
+    curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg \
+    echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list \
+    sudo apt-get update \
+    sudo apt-get install redis \
+    systemctl enable redis-server.service \
+    gem install sidekiq \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 #######################################################################
