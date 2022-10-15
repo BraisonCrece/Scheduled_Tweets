@@ -1,4 +1,7 @@
 # :technologist: PRACTICE PROJECT - SHEDULED TWEETS
+The application allows the user to have multiple Twitter accounts and **schedule tweets** (Who would have thought!) which will be automatically tweeted at the set time.
+
+
 On this project I have learned :memo: :
 
 - ## OmniAuth: 
