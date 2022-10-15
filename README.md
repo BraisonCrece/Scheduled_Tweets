@@ -28,6 +28,11 @@ On this project I have learned :memo: :
   
   
   ### It has been a great learning experience. Let's keep going!
-  
-  
+  ------------------------------------------------------------------------------------------------------
+  _Scheduled Tweets_ :
+  * _Ruby 3.1.2_
+  * _Rails 7.0.4_
+  * _postgreSql 14.5_
+  * _BootsTrap 5_
+ 
   
